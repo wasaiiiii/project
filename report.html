@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>report</title>
+    <style>
+      * {
+        margin: 20px;
+      }
+      #design{
+        box-sizing: border-box;
+      }
+      .container {
+        padding: 5px;
+        float: left;
+        width: 45%;
+      }
+      .container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .container .text {
+        padding: 5px;
+        text-align: center;
+      }
+      #content img{
+        width:800px;
+        height:300px;
+      }
+      #fin{
+        margin-bottom: 90px;
+      }
+      .button{
+        position: fixed;
+        bottom:20px;
+        right:35px;
+        text-decoration: none;
+        background-color: darkseagreen;
+        padding: 20px;
+        color:white;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">实验报告</h1>
+    <div>
+        <h2>人员信息：</h2>
+    <p>
+      张怡君<br />
+      学号：0223352<br />
+      班级：软件工程2211
+    </p>
+    </div>
+    <div>
+        <h2>网站介绍：</h2>
+        <ul>
+          <li>名称：Rick and Morty</li>
+          <li>主题：动漫Rick and Morty的fan site</li>
+          <li>
+            选题目的：Rick and
+            Morty是我非常喜欢且了解的一部动漫，所以将其定为本次web大作业的主题
+          </li>
+        </ul>
+    </div>
+    <div id="design">
+        <h2>网站设计：</h2>
+      <p>一张主页+三张子页+一张报告</p>
+      <div class="container">
+        <img src="imgs/index.png" />
+        <div class="text">首页</div>
+      </div>
+      <div class="container">
+        <img src="imgs/characters.png" />
+        <div class="text">角色合集</div>
+      </div>
+      <div class="container">
+        <img src="imgs/episodes.png" />
+        <div class="text">剧集合集</div>
+      </div>
+      <div class="container">
+        <img src="imgs/login.png" />
+        <div class="text">登录界面</div>
+      </div>
+    </div>
+    <div id="content">
+        <h2>网站内容：</h2>
+        <p>主要用到的技术有float布局，position定位，列表ul，table，img，伪类，伪元素，文字悬浮于图片上，少量js</p>
+        <ol>
+            <li>
+                轮播图<br>
+                <img src="imgs/lunbotu.gif">
+            </li>
+            <li>鼠标移到图片上显示文字<br>
+                <img src="imgs/mouseover.gif">
+            </li>
+            <li>
+                锚点<br>
+                <img src="imgs/maodian.gif">
+            </li>
+            <li>
+                回到顶部<br>
+                <img src="imgs/backtotop.gif">
+            </li>
+            <li>
+                标签页logo<br>
+                <img src="imgs/tab.png">
+            </li>
+        </ol>
+    </div>
+    <div id="fin">
+        <h2>最终结果与讨论</h2>
+        <p>
+            通过这次大作业，我对已学知识能够综合运用，同时也利用W3school,CSDN等网站自学，掌握了个人网站建设的技巧和基本网站建设的过程。
+            完成度较为满意，风格和谐统一，布局美观，页面整洁。一开始想做响应式设计的，但因为一些技术问题还是放弃了。
+            希望熟练掌握js后能做出更多的动画效果。
+        </p>
+    </div>
+    <a href="index.html" class="button">一键返回主页</a>
+  </body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>episodes</title>
+        <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(imgs/BG.jpg);
+            }
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color:rgb(134, 241, 40)
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #353535;
+                position: sticky;
+                top:0;
+            }
+            li{
+                float:left;
+            }
+            li a, .dropbtn{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color:rgb(98, 152, 17)
+            }
+            #active{
+                background-color:rgb(98, 152, 17)
+            }
+            .dropdown{
+                display: inline-block;
+            }
+            .content{
+                display: none;
+                position:absolute;
+                background-color: #353535;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .content a{
+                color:white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .content a:hover{
+                background-color: rgb(98, 152, 17);
+            }
+            .dropdown:hover .content {
+                display: block;
+            }
+            .main::after{
+                content:"";
+                clear:both;
+                display: table;
+            }
+            .main{
+                background-color: blanchedalmond;
+                padding: 15px;
+                margin: 20px;
+            }
+            .left{
+                float:left;
+                width:70%;
+                padding:15px;
+            }
+            .right{
+                float: left;
+                width:30%;
+                padding:15px;
+            }
+            table{
+                width:100%;
+                border-collapse: collapse;
+            }
+            table,th,td{
+                border:1px solid;
+                text-align: center;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Rick and Morty</h1>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">角色</a></li>
+                <li class="dropdown">
+                    <a href="episodes.html" class="dropbtn" id="active">剧集</a>
+                    <div class="content">
+                        <a href="season1.html">Season 1</a>
+                        <a href="season1.html">Season 2</a>
+                        <a href="season1.html">Season 3</a>
+                        <a href="season1.html">Season 4</a>
+                        <a href="season1.html">Season 5</a>
+                        <a href="season1.html">Season 6</a>
+                    </div>
+                </li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h2>Episodes</h2>
+            <div class="left">
+                <h3>Series Overview</h3><hr>
+                <table style="margin-top:20px">
+                    <tr style="background-color:#92b8a3a5">
+                        <th>Season</th>
+                        <th>Episodes</th>
+                        <th>Season Premiere</th>
+                        <th>Season Finale</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>11</td>
+                        <td>December 2, 2013</td>
+                        <td>April 14, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>July 26, 2015</td>
+                        <td>October 4, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>April 1, 2017</td>
+                        <td>October 1, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>November 10, 2019</td>
+                        <td>May 31, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>June 20, 2021</td>
+                        <td>September 5, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>10</td>
+                        <td>September 4, 2022</td>
+                        <td>December 11, 2022</td>
+                    </tr>
+                </table>
+                <h3>Episodes</h3><hr>
+                <h4>Season 1(2013-2014)</h4>
+                <table>
+                    <tr style="background-color:red">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Pilot</td>
+                        <td>December 2, 2013</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Lawnmower Dog</td>
+                        <td>December 9, 2013</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Anatomy Park</td>
+                        <td>December 16, 2013</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>M.Night Shaym-Aliens!</td>
+                        <td>January 13, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>Meeseeks and Destroy</td>
+                        <td>January 20, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>Rick Potion #9</td>
+                        <td>January 27, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>Raising Gazorpazorp</td>
+                        <td>March 10, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>Rixty Minutes</td>
+                        <td>March 17, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>Something Ricked This Way Comes</td>
+                        <td>March 24, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>Close Rick-Counters of the Rick Kind</td>
+                        <td>April 7, 2014</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>Ricksy Business</td>
+                        <td>April 14, 2014</td>
+                    </tr>
+                </table>
+                <h4>Season 2(2015)</h4>
+                <table>
+                    <tr style="background-color:orange">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>12</td>
+                        <td>A Rickle in Time</td>
+                        <td>July 26, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>13</td>
+                        <td>Mortynight Run</td>
+                        <td>August 2, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>14</td>
+                        <td>Auto Erotic Assimilation</td>
+                        <td>August 9, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>15</td>
+                        <td>Total Rickall</td>
+                        <td>August 16, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>16</td>
+                        <td>Get Schwifty</td>
+                        <td>August 23, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>17</td>
+                        <td>The Ricks Must Be Crazy</td>
+                        <td>August 30, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>18</td>
+                        <td>Big Trouble in Little Sanchez</td>
+                        <td>September 13, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>19</td>
+                        <td>Interdimensional Cable 2:Tempting Fate</td>
+                        <td>September 20, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>20</td>
+                        <td>Look Who's Purging Now</td>
+                        <td>September 27, 2015</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>21</td>
+                        <td>The Wedding Squanchers</td>
+                        <td>October 4, 2015</td>
+                    </tr>
+                </table>
+                <h4>Season 3(2017)</h4>
+                <table>
+                    <tr style="background-color:yellow">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>22</td>
+                        <td>The Rickshank Rickdemption</td>
+                        <td>April 1, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>23</td>
+                        <td>Rickmancing the Stone</td>
+                        <td>July 30, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>24</td>
+                        <td>Pickle Rick</td>
+                        <td>August 6, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>25</td>
+                        <td>Vindicators 3:The Return of Wolrdender</td>
+                        <td>August 13, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>26</td>
+                        <td>The Whirly Dirly Conspiracy</td>
+                        <td>August 20, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>27</td>
+                        <td>Rest and Ricklaxation</td>
+                        <td>August 27, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>28</td>
+                        <td>The Ricklantis Mixup</td>
+                        <td>September 10, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>29</td>
+                        <td>Morty's Mind Blowers</td>
+                        <td>September 17, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>30</td>
+                        <td>The ABC's of Beth</td>
+                        <td>September 24, 2017</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>31</td>
+                        <td>The Rickchurian Mortydate</td>
+                        <td>October 1, 2017</td>
+                    </tr>
+                </table>
+                <h4>Season 4(2019-2020)</h4>
+                <table>
+                    <tr style="background-color:green">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>32</td>
+                        <td>Edge of Tomorty:Rick Die Rickpeat</td>
+                        <td>November 10, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>33</td>
+                        <td>The Old Man and the Seat</td>
+                        <td>November 17, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>34</td>
+                        <td>One Crew Over the Crewcoo's Morty</td>
+                        <td>November 24, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>35</td>
+                        <td>Claw and Hoarder:Special Ricktim's Morty</td>
+                        <td>December 8, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>36</td>
+                        <td>Rattlestar Ricklactica</td>
+                        <td>December 15, 2019</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>37</td>
+                        <td>Never Ricking Morty</td>
+                        <td>May 3, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>38</td>
+                        <td>Promotyus</td>
+                        <td>May 10, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>39</td>
+                        <td>The Vat of Acid Episode</td>
+                        <td>May 17, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>40</td>
+                        <td>Childrick of Morty</td>
+                        <td>May 24, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>41</td>
+                        <td>Star Mort Rickturn of the Jerri</td>
+                        <td>May 31, 2020</td>
+                    </tr>
+                </table>
+                <h4>Season 5(2021)</h4>
+                <table>
+                    <tr style="background-color:blue">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>42</td>
+                        <td>Mort Dinner Rick Andre</td>
+                        <td>June 20, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>43</td>
+                        <td>Mortyplicity</td>
+                        <td>June 27, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>44</td>
+                        <td>A Rickconvenient Mort</td>
+                        <td>July 4, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>45</td>
+                        <td>Rickdependence Spray</td>
+                        <td>July 11, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>46</td>
+                        <td>Amortycan Grickfitti</td>
+                        <td>July 18, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>47</td>
+                        <td>Rick & Morty's Thanksplotation Spectacular</td>
+                        <td>July 25, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>48</td>
+                        <td>Gotron Jerrysis Rickvangelion</td>
+                        <td>August 1, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>49</td>
+                        <td>Rickternal Friendshine of the Spotless Mort</td>
+                        <td>August 8, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>50</td>
+                        <td>Forgetting Sarick Mortshall</td>
+                        <td>September 5, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>51</td>
+                        <td>Rickmural Jack</td>
+                        <td>September 12, 2021</td>
+                    </tr>
+                </table>
+                <h4>Season 6(2022)</h4>
+                <table>
+                    <tr style="background-color:purple">
+                        <th>No.</th>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Airdate</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>52</td>
+                        <td>Solaricks</td>
+                        <td>September 4, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>53</td>
+                        <td>Rick:A Mort Well Lived</td>
+                        <td>September 11,2022</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>54</td>
+                        <td>Bethic Twinstinct</td>
+                        <td>September 18, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>55</td>
+                        <td>Night Family</td>
+                        <td>September 25, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>56</td>
+                        <td>Final DeSmithation</td>
+                        <td>October 2, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>57</td>
+                        <td>Juricksic Mort</td>
+                        <td>October 9, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>58</td>
+                        <td>Full Meta Jackrick</td>
+                        <td>November 20, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>59</td>
+                        <td>Analyze Piss</td>
+                        <td>November 27, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>60</td>
+                        <td>A Rick in King Mortur's Mort</td>
+                        <td>December 4, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>61</td>
+                        <td>Ricktional Mortpoon's Rickmas Mortcation</td>
+                        <td>December 11, 2022</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right">
+                <img src="imgs/Rick_and_Morty_logo.webp" width="300" height="100">
+                <p>Rick and Morty is an American animated television series which premiered on December 2, 2013, on Cartoon Network's late-night programming block Adult Swim.</p>
+                <p>As of December 11th 2022, 61 episodes of Rick and Morty have aired.</p>
+                <p>In May 2018, it was announced that the series was renewed for 70 more episodes for an unspecified amount of seasons.</p>
+            </div>
+        </div>
+    </body>
+</html>

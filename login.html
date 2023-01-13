@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>login</title>
+        <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+        <style>
+            body{
+                background-image: url(imgs/BG.jpg);
+            }
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color:rgb(134, 241, 40)
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #353535;
+            }
+            li{
+                float:left;
+            }
+            li a, .dropbtn{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            #active{
+                background-color:rgb(98, 152, 17)
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color:rgb(98, 152, 17)
+            }
+            .dropdown{
+                display: inline-block;
+            }
+            .content{
+                display: none;
+                position:absolute;
+                background-color: #353535;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .content a{
+                color:white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .content a:hover{
+                background-color: rgb(98, 152, 17);
+            }
+            .dropdown:hover .content {
+                display: block;
+            }
+            .main{
+                background-color: blanchedalmond;
+                padding: 15px;
+                margin: 20px;
+            }
+            .login{
+                width: 382px;
+                overflow: hidden;
+                margin: auto;
+                margin: 20 0 0 450px;
+                padding: 80px;
+                background: wheat;
+                border-radius: 16px;
+            }
+            .login .a{
+                width: 300px;
+                height: 30px;
+                border: none;
+                border-radius: 4px;
+                padding-left: 8px;
+            }
+            .login .b{
+                width: 370px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Rick and Morty</h1>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">角色</a></li>
+                <li class="dropdown">
+                    <a href="episodes.html" class="dropbtn">剧集</a>
+                    <div class="content">
+                        <a href="season1.html">Season 1</a>
+                        <a href="season1.html">Season 2</a>
+                        <a href="season1.html">Season 3</a>
+                        <a href="season1.html">Season 4</a>
+                        <a href="season1.html">Season 5</a>
+                        <a href="season1.html">Season 6</a>
+                    </div>
+                </li>
+                <li><a href="login.html" id="active">登录</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="login">
+                <h2 style="text-align:center">Login</h2><br>
+                <form>
+                    账号：
+                    <input class="a" type="text" placeholder="账号"><br><br>
+                    密码：
+                    <input class="a" type="text" placeholder="密码"><br><br>
+                    <input class="b" type="submit" value="登录"><br><br>
+                    <input type="checkbox">记住我<br><br>
+                    <p>忘记密码？<a href="#">点此处</a></p>
+                    <p>没有账号，<a href="#">点击注册</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

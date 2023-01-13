@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>characters</title>
+        <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+        <style>
+            body{
+                background-image: url(imgs/BG.jpg);
+            }
+            #btn{
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 35px;
+                z-index: 99;
+                border: none;
+                outline: none;
+                background-color: green;
+                color: white;
+                cursor: pointer;
+                padding:15px;
+                border-radius: 10px;
+            }
+            #btn:hover{
+                background-color: lightgreen;
+            }
+            ul.sidebar{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 7%;
+                height: 100%;
+                position: fixed;
+                overflow: auto;
+                background-color: antiquewhite;
+            }
+            .sidebar li{
+                display: block;
+                text-decoration: none;
+                padding: 20px;
+            }
+            .sidebar li a{
+                color:black;
+            }
+            .sidebar li a:hover{
+                background-color: rgb(211, 176, 176);
+            }
+            .header{
+                width:92%;
+                float:right;
+            }
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color:rgb(134, 241, 40)
+            }
+            ul.nav{
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #353535;
+            }
+            .nav li{
+                float:left;
+            }
+            li a, .dropbtn{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .nav li a:hover, .dropdown:hover .dropbtn {
+                background-color:rgb(98, 152, 17)
+            }
+            #active{
+                background-color:rgb(98, 152, 17)
+            }
+            .dropdown{
+                display: inline-block;
+            }
+            .content{
+                display: none;
+                position:absolute;
+                background-color: #353535;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .content a{
+                color:white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .content a:hover{
+                background-color: rgb(98, 152, 17);
+            }
+            .dropdown:hover .content {
+                display: block;
+            }
+            .main{
+                background-color: blanchedalmond;
+                padding: 15px;
+                margin: 20px;
+                width:89%;
+                float:right;
+            }
+            table{
+                width: 100%;
+            }
+            img{
+                width:75px;
+                height:100px;
+            }
+        </style>
+        <script>
+                    window.onscroll = function() {scrollFunction()};
+         
+         function scrollFunction() {console.log(121);
+             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 document.getElementById("btn").style.display = "block";
+             } else {
+                 document.getElementById("btn").style.display = "none";
+             }
+         }
+         function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="btn" title="top">Back to Top</button>
+        <ul class="sidebar">
+            <li><a href="#a">A</a></li>
+            <li><a href="#b">B</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#d">D</a></li>
+            <li><a href="#e">E</a></li>
+            <li><a href="#f">F</a></li>
+            <li><a href="#g">G</a></li>
+            <li><a href="#h">H</a></li>
+            <li><a href="#i">I</a></li>
+            <li><a href="#j">J</a></li>
+            <li><a href="#k">K</a></li>
+            <li><a href="#l">L</a></li>
+            <li><a href="#m">M</a></li>
+            <li><a href="#n">N</a></li>
+            <li><a href="#o">O</a></li>
+            <li><a href="#p">P</a></li>
+            <li><a href="#q">Q</a></li>
+            <li><a href="#r">R</a></li>
+            <li><a href="#s">S</a></li>
+            <li><a href="#t">T</a></li>
+            <li><a href="#u">U</a></li>
+            <li><a href="#v">V</a></li>
+            <li><a href="#w">W</a></li>
+            <li><a href="#x">X</a></li>
+            <li><a href="#y">Y</a></li>
+            <li><a href="#z">Z</a></li>
+        </ul>
+        <div class="header">
+            <h1>Rick and Morty</h1>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html" id="active">角色</a></li>
+                <li class="dropdown">
+                    <a href="episodes.html" class="dropbtn">剧集</a>
+                    <div class="content">
+                        <a href="season1.html">Season 1</a>
+                        <a href="season1.html">Season 2</a>
+                        <a href="season1.html">Season 3</a>
+                        <a href="season1.html">Season 4</a>
+                        <a href="season1.html">Season 5</a>
+                        <a href="season1.html">Season 6</a>
+                    </div>
+                </li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div>
+                <h3 id="a">A</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Abradolf_Lincler.webp">Abrodolph Lincoler</td>
+                        <td><img src="imgs/Adam.webp">Adam</td>
+                        <td><img src="imgs/AdjudicatorRick.PNG.webp">Adjudicator Rick</td>
+                        <td><img src="imgs/AfroRick.webp">Afro Rick</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/AlanRails.webp">Alan Rails</td>
+                        <td><img src="imgs/Albert_Einstein.webp">Albert Einstein</td>
+                        <td><img src="imgs/Alexander.webp">Alexander</td>
+                        <td><img src="imgs/Alien_Morty.webp">Alien Morty</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Alien_Rick.webp">Alien Rick</td>
+                        <td><img src="imgs/Amish_Cyborg.webp">Amish Cyborg</td>
+                        <td><img src="imgs/Annie.webp">Annie</td>
+                        <td><img src="imgs/Ants_in_my_eyes_johnson.webp">Ants in my Eyes Johnson</td>
+                    </tr>
+                </table>
+                <h3 id="b">B</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Baby_Legs.webp">Baby Legs</td>
+                        <td><img src="imgs/Baby_Poopybutthole.webp">Baby Poopybutthole</td>
+                        <td><img src="imgs/Balthromaw.webp">Balthromaw</td>
+                        <td><img src="imgs/Beebo.webp">Beebo</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/BethMytholog.webp">Beth's Mytholog</td>
+                        <td><img src="imgs/BigFatRick.webp">Big Fat Rick</td>
+                        <td><img src="imgs/BigMorty.webp">Big Morty</td>
+                        <td><img src="imgs/BirdPerson.webp">Birdperson</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Blamphs.webp">Blamphs</td>
+                        <td><img src="imgs/Blazen.webp">Blazen</td>
+                        <td><img src="imgs/Blim_Blam.webp">Blim Blam</td>
+                        <td><img src="imgs/Bobbymoynihan.webp">Bobby Moynihan</td>
+                    </tr>
+                </table>
+                <h3 id="c">C</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Calypso.webp">Calypso</td>
+                        <td><img src="imgs/Canklanker.webp">Canklanker Thom</td>
+                        <td><img src="imgs/Centaur.webp">Centaur</td>
+                        <td><img src="imgs/Chris.webp">Chris</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Chud_King.webp">Chud King</td>
+                        <td><img src="imgs/Colossus.webp">Colossus</td>
+                        <td><img src="imgs/Conroy.webp">Conroy</td>
+                        <td><img src="imgs/Cool_Rick.webp">Cool Rick</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Coop.webp">Coop</td>
+                        <td><img src="imgs/Cornvelious_Daniel.webp">Cornvelious Daniel</td>
+                        <td><img src="imgs/Cousin_Nicky.webp">Cousin Nicky</td>
+                        <td><img src="imgs/Crocubot.webp">Crocubot</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Cronenberg_Morty.webp">Cronenberg Morty</td>
+                        <td><img src="imgs/Cronenberg_Rick.webp">Cronenberg Rick</td>
+                        <td><img src="imgs/Crowscare.webp">Crowscare</td>
+                        <td><img src="imgs/Cynthia.webp">Cynthia</td>
+                    </tr>
+                </table>
+                <h3 id="d">D</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Dale.webp">Dale</td>
+                        <td><img src="imgs/Daphne.webp">Daphne</td>
+                        <td><img src="imgs/Daron_Jefferson.webp">Daron Jefferson</td>
+                        <td><img src="imgs/Darthpoopybutthole.webp">Darth Poopybutthole</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/David_Letterman.webp">David Letterman</td>
+                        <td><img src="imgs/Davin.webp">Davin</td>
+                        <td><img src="imgs/DiabloVerde.webp">Diablo Verde</td>
+                        <td><img src="imgs/Davin.webp">Diane Sanchez</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Donna_Guterman.webp">Donna Guterman</td>
+                        <td><img src="imgs/doofy.webp">Doofus Rick</td>
+                        <td><img src="imgs/Drglipglop.webp">Dr. Glip-Glop</td>
+                        <td><img src="imgs/Dr._Schmidt.webp">Dr. Schmidt</td>
+                    </tr>
+                </table>
+                <h3 id="e">E</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Eddie.webp">Eddie</td>
+                        <td><img src="imgs/Eli.webp">Eli</td>
+                        <td><img src="imgs/Etha.webp">Ethan</td>
+                        <td><img src="imgs/EvilMorty.webp">Evil Morty</td>
+                    </tr>
+                </table>
+                <h3 id="f">F</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Fart.webp">Fart</td>
+                        <td><img src="imgs/Fleeb.webp">Fleeb</td>
+                        <td><img src="imgs/Florflok.webp">Florflok</td>
+                        <td><img src="imgs/Frankp.webp">Frank Palicky</td>
+                    </tr>
+                </table>
+                <h3 id="g">G</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/GarmentDistrictRick.PNG.webp">Garment District Rick</td>
+                        <td><img src="imgs/Geardude.webp">Geardude</td>
+                        <td><img src="imgs/Gene.PNG.webp">Gene</td>
+                        <td><img src="imgs/GeneralNathan.webp">General Nathan</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Glar.webp">Glar</td>
+                        <td><img src="imgs/GlaxoSlimslom.webp">GlaxoSlimslom</td>
+                        <td><img src="imgs/Glenn.PNG.webp">Glenn</td>
+                        <td><img src="imgs/Glootie.webp">Glootie</td>
+                    </tr>
+                </table>
+                <h3 id="h">H</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/HammerMortyI.webp">Hammerhead Morty</td>
+                        <td><img src="imgs/Hamurai.webp">Hamurai</td>
+                        <td><img src="imgs/Haroldwebp.webp">Harold</td>
+                        <td><img src="imgs/Garbage_Goober.webp">Harold The Garbage Goober</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Magma-Q.PNG.webp">Helium-Q</td>
+                        <td><img src="imgs/Hambelridge.webp">Hemorrhage</td>
+                        <td><img src="imgs/Hephaestus.webp">Hephaestus</td>
+                        <td><img src="imgs/HeroinKeith.webp">Heroin Keith</td>
+                    </tr>
+                </table>
+                <h3 id="i">I</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Ideal_jerry.webp">Ideal Jerry</td>
+                        <td><img src="imgs/Izzy.webp">Izzy</td>
+                    </tr>
+                </table>
+                <h3 id="j">J</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Jacob_Philip.webp">Jacob Philip</td>
+                        <td><img src="imgs/Jacqueline.webp">Jacqueline</td>
+                        <td><img src="imgs/Jaguar.webp">Jaguar</td>
+                        <td><img src="imgs/Japheth.webp">Japheth</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Jeff.webp">Jeff</td>
+                        <td><img src="imgs/Jessica.webp">Jessica</td>
+                        <td><img src="imgs/Jodie.webp">Jodie</td>
+                        <td><img src="imgs/Jon.webp">Jon</td>
+                    </tr>
+                </table>
+                <h3 id="k">K</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Kathy_ireland.webp">Kathy Ireland</td>
+                        <td><img src="imgs/Kendra.webp">Kendra</td>
+                        <td><img src="imgs/Kevin.webp">Kevin</td>
+                        <td><img src="imgs/Kiara.webp">Kiara</td>
+                    </tr>
+                </table>
+                <h3 id="l">L</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/LadyKatana.webp">Lady Katana</td>
+                        <td><img src="imgs/Larry.webp">Larry</td>
+                        <td><img src="imgs/Leonard_Smith.webp">Leonard Smith</td>
+                        <td><img src="imgs/Lisa.webp">Lisa</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/LittleDipper.webp">Little Dipper</td>
+                        <td><img src="imgs/LittleRicky.webp">Little Ricky Wrap-it-up</td>
+                        <td><img src="imgs/LordHenderfinger.webp">Lord Henderfinger</td>
+                        <td><img src="imgs/LuciusNeedful.webp">Lucius Needful</td>
+                    </tr>
+                </table>
+                <h3 id="m">M</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Maggie.webp">Maggie</td>
+                        <td><img src="imgs/Magnesium_J.webp">Magnesium-J</td>
+                        <td><img src="imgs/Mar-Sha.webp">Mar-Sha</td>
+                        <td><img src="imgs/Marta.webp">Marta</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/MC_Haps.webp">MC Haps</td>
+                        <td><img src="imgs/Michael_Thompson.webp">Michael Thompson</td>
+                        <td><img src="imgs/Miles Knightly.webp">Miles Knightly</td>
+                        <td><img src="imgs/MillionAnts.webp">Million Ants</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Morty_Jr.JPG.webp">Morty Jr.</td>
+                        <td><img src="imgs/MrAlwaysWantsToBeHunted.webp">Mr. Always Wants To Be Hunted</td>
+                        <td><img src="imgs/MrBeauregard.webp">Mr. Beauregard</td>
+                        <td><img src="imgs/MrBenson.webp">Mr. Benson</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Meeseeks.webp">Mr. Meeseeks</td>
+                        <td><img src="imgs/Kirkland.webp">Mr. Meeseeks (Kirkland)</td>
+                        <td><img src="imgs/Mr_Nimbus.webp">Mr. Nimbus</td>
+                        <td><img src="imgs/Mr_poopy_butthole.webp">Mr. Poopybutthole</td>
+                    </tr>
+                </table>
+                <h3 id="n">N</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Nancy.webp">Nancy</td>
+                        <td><img src="imgs/Naruto_Smith.webp">Naruto Smith</td>
+                        <td><img src="imgs/Nick.webp">Nick</td>
+                        <td><img src="imgs/Noob_Noob.webp">Noob Noob</td>
+                    </tr>
+                </table>
+                <h3 id="o">O</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Octopus_Man.webp">Octopus Man</td>
+                        <td><img src="imgs/OldReptile.webp">Old Reptile</td>
+                    </tr>
+                </table>
+                <h3 id="p">P</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/PatGutermanwebp.webp">Pat Guterman</td>
+                        <td><img src="imgs/Paul_Fleishmam.webp">Paul Fleishman</td>
+                        <td><img src="imgs/Pensylvester.webp">Pencilvester</td>
+                        <td><img src="imgs/PhillipJacobs.webp">Phillip Jacobs</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/PhotographyCyborgs.webp">Photography Cyborgs</td>
+                        <td><img src="imgs/Pichael_Thompson.webp">Pichael Thompson</td>
+                        <td><img src="imgs/Pickle_rick.webp">Pickle Rick</td>
+                        <td><img src="imgs/Planetina.webp">Planetina</td>
+                    </tr>
+                </table>
+                <h3 id="q">Q</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/QuantumRick.webp">Quantum Rick</td>
+                    </tr>
+                </table>
+                <h3 id="r">R</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Randy_Dicknose.webp">Randy Dicknose</td>
+                        <td><img src="imgs/Reggie.webp">Reggie</td>
+                        <td><img src="imgs/Regular_Legs.webp">Regular Legs</td>
+                        <td><img src="imgs/Rhettcaan.webp">Rhett Caan</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/RicardoMontoya.webp">Ricardo Montoya</td>
+                        <td><img src="imgs/Richard.webp">Richard</td>
+                        <td><img src="imgs/RickDSanchezIII.webp">Rick D. Sanchez III</td>
+                        <td><img src="imgs/Rickbot.webp">RickBot</td>
+                    </tr>
+                </table>
+                <h3 id="s">S</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Samantha.webp">Samantha</td>
+                        <td><img src="imgs/Scary_Glenn_Johnson.webp">Scary Glenn</td>
+                        <td><img src="imgs/Scaryterry.webp">Scary Terry</td>
+                        <td><img src="imgs/Scropon.webp">Scropon</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/Simon.webp">Simon</td>
+                        <td><img src="imgs/SimpleRick.webp">Simple Rick</td>
+                        <td><img src="imgs/Sleepy_Gary.webp">Sleepy Gary</td>
+                        <td><img src="imgs/Slick_Morty.webp">Slick Morty</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/SlipperyStair.webp">Slippery Stair</td>
+                        <td><img src="imgs/Slowmobius.webp">Slow Mobius</td>
+                        <td><img src="imgs/Snuffles.webp">Snuffles</td>
+                        <td><img src="imgs/Squanchy_.webp">Squanchy</td>
+                    </tr>
+                </table>
+                <h3 id="t">T</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Taddy.webp">Taddy Mason</td>
+                        <td><img src="imgs/Tag-man.webp">Tag-Man</td>
+                        <td><img src="imgs/Tamantha.webp">Tammy Guterman</td>
+                        <td><img src="imgs/Terry.webp">Terry</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imgs/President.webp">The President</td>
+                        <td><img src="imgs/Tiktok.webp">Ticktock</td>
+                        <td><img src="imgs/Tinkles.webp">Tinkles</td>
+                        <td><img src="imgs/Tophatjones.webp">Tophat Jones</td>
+                    </tr>
+                </table>
+                <h3 id="u">U</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/UncleSteve.webp">Uncle Steve</td>
+                        <td><img src="imgs/Unity.webp">Unity</td>
+                    </tr>
+                </table>
+                <h3 id="v">V</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Vampire_Master.webp">Vampire Master</td>
+                        <td><img src="imgs/VanceMaximus.webp">Vance Maximus</td>
+                        <td><img src="imgs/Ventriloquiver.webp">Ventriloquiver</td>
+                        <td><img src="imgs/Vermagerber.webp">Vermigurber</td>
+                    </tr>
+                </table>
+                <h3 id="w">W</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/wasp_rick.webp">Wasp Rick</td>
+                        <td><img src="imgs/Worldender.webp">Worldender</td>
+                    </tr>
+                </table>
+                <h3 id="x">X</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Xing_Ho.webp">Xing Ho</td>
+                    </tr>
+                </table>
+                <h3 id="y">Y</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/Yaarb.webp">Yaarb</td>
+                    </tr>
+                </table>
+                <h3 id="z">Z</h3>
+                <table>
+                    <tr>
+                        <td><img src="imgs/ZarbadarGloonch.webp">Zarbadar Gloonch</td>
+                        <td><img src="imgs/Zeep.webp">Zeep Xanflorp</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

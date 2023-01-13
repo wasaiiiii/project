@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Rick and Morty</title>
+        <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(imgs/BG.jpg);
+            }
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color:rgb(134, 241, 40)
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #353535;
+            }
+            li{
+                float:left;
+            }
+            li a, .dropbtn{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color:rgb(98, 152, 17)
+            }
+            #active{
+                background-color:rgb(98, 152, 17)
+            }
+            .dropdown{
+                display: inline-block;
+            }
+            .content{
+                display: none;
+                position:absolute;
+                background-color: #353535;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .content a{
+                color:white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .content a:hover{
+                background-color: rgb(98, 152, 17);
+            }
+            .dropdown:hover .content {
+                display: block;
+            }
+            .main::after{
+                content:"";
+                clear:both;
+                display: table;
+            }
+            .main{
+                background-color: blanchedalmond;
+                padding: 15px;
+                margin: 20px;
+            }
+            .left{
+                float:left;
+                width:75%;
+                padding:15px;
+            }
+            .right{
+                float: left;
+                width:25%;
+                padding:15px;
+            }
+            .outer{
+                width:717px;
+                height:413px;
+                margin:0 auto 60px;
+                position: relative;
+            }
+            .outer img{
+                width:100%;
+                transition-duration: 0.5s;
+                position: absolute;
+                opacity: 0;
+            }
+            .outer .on{
+                opacity: 1;
+            }
+            .outer ul{
+                position: absolute;
+                bottom: 10px;
+                left: 308px;
+                
+            }
+            .outer ul li{
+                list-style: none;
+                float: left;
+                width: 15px;
+                height: 15px;
+                background-color: gray;
+                margin: 0 5px;
+                opacity: 0.5;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            .outer ul li.active{
+                background-color: black;
+                opacity: 0.5;
+            }
+            .leftBtn, .rightBtn{
+                position: absolute;
+                width:60px;
+                height:100px;
+                background-color: #353535;
+                opacity: 0.5;
+                text-align: center;
+                font-size: 60px;
+                color: #ccc;
+                cursor: pointer;
+                top:35%;
+                line-height: 100px;
+                display: none;
+            }
+            .leftBtn{
+                left:0;
+            }
+            .rightBtn{
+                right:0;
+            }
+            .outer:hover .leftBtn, .outer:hover .rightBtn{
+                display: block;
+            }
+            .leftBtn:hover, .rightBtn:hover{
+                color:#fff;
+            }
+            p{
+                line-height: 1.8;
+            }
+            .post{
+                float:left;
+                margin-right: 15px;
+                height:300px;
+                width:225px;
+            }
+            #mainchar {
+                width: 960px;
+                height: 830px;
+                overflow: hidden;
+            }
+            #container {
+                margin-right: -30px;
+                margin-bottom: -30px;
+                overflow: auto;
+            }
+            .box {
+                position: relative;
+                width: 300px;
+                height: 400px;
+                margin: 0 30px 30px 0;
+                background-size: 100% 100%;
+                float: left;
+            }
+            .box img{
+                width: 300px;
+                height: 400px;
+            }
+            .box:hover .details {
+                display: block;
+            }
+            .text {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                line-height: 30px;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            .blank {
+                float: left;
+                width: 80px;
+                background-color: transparent;
+                height: 30px;
+            }
+            .h3 {
+                float: left;
+                width: 140px;
+                text-align: center;
+                color: #ffffff;
+            }
+            .details {
+                color: #FFFFFF;
+                display: none;
+            }
+            .footer{
+                text-align:right;
+                background-color: #353535;
+                padding: 20px;
+            }
+            .footer img{
+                width: 90px;
+                height: 90px;
+                float: left;
+            }
+            .footer a{
+                color:white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Rick and Morty</h1>
+            <ul>
+                <li><a href="index.html" id="active">首页</a></li>
+                <li><a href="characters.html">角色</a></li>
+                <li class="dropdown">
+                    <a href="episodes.html" class="dropbtn">剧集</a>
+                    <div class="content">
+                        <a href="season1.html">Season 1</a>
+                        <a href="season1.html">Season 2</a>
+                        <a href="season1.html">Season 3</a>
+                        <a href="season1.html">Season 4</a>
+                        <a href="season1.html">Season 5</a>
+                        <a href="season1.html">Season 6</a>
+                    </div>
+                </li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="outer">
+                        <img class="on" src="imgs/gallery1.jpg">
+                        <img src="imgs/gallery2.jpg">
+                        <img src="imgs/gallery3.jpg">
+                        <img src="imgs/gallery4.jpg">
+                    <ul>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="leftBtn">&lt;</div>
+                    <div class="rightBtn">&gt;</div>
+                </div>
+                <span>
+                    <img class="post" src="imgs/post.jpg">
+                    <p>
+                        <b>导演：</b>贾斯汀·罗兰德、约翰·赖斯、杰夫·迈尔斯、布莱恩·纽顿、斯蒂芬·桑多瓦尔、韦斯·阿切尔<br>
+                        <b>编剧：</b>丹·哈蒙、贾斯汀·罗兰德、瑞恩·雷德利、埃里克·阿科斯塔、汤姆·考夫曼、韦德·兰多夫、迈克·麦克马汉、马特·罗勒<br>
+                        <b>动画制作：</b>丹·哈蒙、贾斯汀·罗兰德<br>
+                        <b>音乐：</b>瑞恩·艾尔德<br>
+                        <b>主要配音：</b>贾斯汀·罗兰、克里斯·帕内尔、斯宾瑟·格拉莫、萨拉·乔克<br>
+                        <b>类型：</b>科幻、冒险、喜剧<br>
+                        <b>地区：</b>美国<br>
+                        <b>播放平台：</b>Netflix、Hulu、Amazon、Youtube、AcFun（中国大陆）<br>
+                        <b>首播日期：</b>2013-12-02
+                    </p>
+                </span><br><br><br>
+                <h2 style="text-align:center">主要角色</h2>
+                <div id="mainchar">
+                    <div id="container">
+                        <div class="box">
+                            <img src="imgs/Rick.webp">
+                            <div class="text">
+                                <div class="blank"></div>
+                                <div class="h3">
+                                    <h3>Rick Sanchez</h3>
+                                    <p class="details">
+                                        《瑞克和莫蒂》的剧情大多围绕他展开。相当地有智慧，制造并随身装备了大量的奇怪的高科技工具或武器。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="imgs/Morty.webp">
+                            <div class="text">
+                                <div class="blank"></div>
+                                <div class="h3">
+                                    <h3>Morty Smith</h3>
+                                    <p class="details">
+                                        瑞克14岁的孙子，经常被瑞克强行拉走，和其一起外出冒险。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="imgs/Summer.webp">
+                            <div class="text">
+                                <div class="blank"></div>
+                                <div class="h3">
+                                    <h3>Summer Smith</h3>
+                                    <p class="details">
+                                        有着美国青少年的典型性格，希望在同龄人中变得受欢迎。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="imgs/Beth.webp">
+                            <div class="text">
+                                <div class="blank"></div>
+                                <div class="h3">
+                                    <h3>Beth Smith</h3>
+                                    <p class="details">
+                                        是一位马兽医并以此养家糊口，虽然敬业但一直梦想着成为一名救治人类的医生。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="imgs/Jerry.webp">
+                            <div class="text">
+                                <div class="blank"></div>
+                                <div class="h3">
+                                    <h3>Jerry Smith</h3>
+                                    <p class="details">
+                                        常被认为是一个失败者，无法得到家人尊重，却总是与瑞克抗争，试图挽回他一家之主的地位。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h3>故事内容</h3>
+                <p style="text-indent:2em">天才兼疯子科学家Rick在失踪多年后突然回到女儿Beth的身边，并且在她的车库里搞了一个科学实验室。Rick有一把“传送门枪”，可以穿越到宇宙的各个次元。外孙Morty莫名其妙就成了他的助手，经常被拖进他的自制太空船内，跟他一同开展各种疯狂刺激的宇宙冒险。女儿女婿对他的 疯狂行为感到不满，却又对这个天才科学家无可奈何。</p>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="imgs/footer.webp">
+            <p>
+                <a href="https://www.adultswim.com/videos/rick-and-morty">[adult swim] / </a>
+                <a href="https://www.youtube.com/playlist?list=PLQl8zBB7bPvL6GycjAtAibVp6FsLWvMcY">YouTube / </a>
+                <a href="https://twitter.com/RickandMorty">Twitter / </a>
+                <a href="https://www.instagram.com/rickandmorty/">Instagram / </a>
+                <a href="https://www.netflix.com/title/80014749">Netflix / </a>
+                <a href="https://www.amazon.com/Pilot-HD/dp/B00GWEQN9U">Amazon</a><br>
+                <a href="report.html" target="_blank">实验报告</a>
+            </p>
+        </div>
+        <script type="text/javascript">
+            var aImgs = document.querySelectorAll('.outer img');
+            var aLis = document.querySelectorAll('.outer li');
+            var btnLeft = document.querySelector('.outer .leftBtn');
+            var btnRight = document.querySelector('.outer .rightBtn');
+            var index = 0;
+            var lastIndex = 0;
+            btnRight.onclick = function(){
+                lastIndex = index;
+                aImgs[lastIndex].className = '';
+                aLis[lastIndex].className = '';
+                index++;
+                index %= aImgs.length;
+                aImgs[index].className = 'on';
+                aLis[index].className = 'active';
+            }
+            btnLeft.onclick = function(){
+                lastIndex = index;
+                aImgs[lastIndex].className = '';
+                aLis[lastIndex].className = '';
+                index--;
+                if (index < 0) {
+                    index = aImgs.length - 1;
+                }
+                aImgs[index].className = 'on';
+                aLis[index].className = 'active';
+            }
+        </script>
+    </body>
+</html>
